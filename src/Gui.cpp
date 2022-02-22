@@ -1,5 +1,5 @@
 #include "Gui.h"
-
+#include "implot.h"
 #include "ofAppRunner.h"
 
 
@@ -12,6 +12,7 @@ namespace ofxImGui
 		, theme(nullptr)
 	{
 		ImGui::CreateContext();
+		ImPlot::CreateContext();
 	}
 
 	//--------------------------------------------------------------
@@ -24,6 +25,7 @@ namespace ofxImGui
 	void Gui::setup(BaseTheme* theme_, bool autoDraw_)
 	{
 		ImGui::CreateContext();
+		ImPlot::CreateContext();
 		ImGuiIO& io = ImGui::GetIO();
 
 		io.DisplaySize = ImVec2((float)ofGetWidth(), (float)ofGetHeight());
@@ -64,6 +66,7 @@ namespace ofxImGui
 		}
 		loadedTextures.clear();
 
+		ImPlot::DestroyContext();
 		ImGui::DestroyContext();
 	}
 

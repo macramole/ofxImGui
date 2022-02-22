@@ -44,10 +44,12 @@ namespace ofxImGui
 			if (ofIsGLProgrammableRenderer())
 			{
 				io.RenderDrawListsFn = programmableDrawData;
+				// programmableDrawData(ImGui::GetDrawData());
 			}
 			else
 			{
 				io.RenderDrawListsFn = fixedDrawData;
+				// fixedDrawData(ImGui::GetDrawData());
 			}
 		}
 
