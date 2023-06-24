@@ -8,7 +8,7 @@ void ofApp::setup()
     //required call
     gui.setup();
     
-    ImGui::GetIO().ConfigFlags |= ImGuiConfigFlags_DockingEnable;
+    //ImGui::GetIO().ConfigFlags |= ImGuiConfigFlags_DockingEnable;
     
     ImGui::GetIO().MouseDrawCursor = false;
     //backgroundColor is stored as an ImVec4 type but can handle ofColor
